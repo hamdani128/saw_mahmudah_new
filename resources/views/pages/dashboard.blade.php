@@ -2,73 +2,104 @@
 @section('content')
 @section('title', 'Dashboard')
 
-<div class="container-fluid">
-                        
-    <!-- start page title -->
-    <div class="row">
-        <div class="col-12">
-            <div class="page-title-box">
-                <div class="page-title-right">
-                    <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Home</li>
-                    </ol>
-                </div>
-                <h4 class="page-title">Home</h4>
-            </div>
-        </div>
-    </div>
-    <!-- end page title -->
-    <div class="row">
-        <div class="col-xl-4 col-lg-4">
-            <div class="card tilebox-one text-white">
-                <div class="card-body bg-info">
-                    <i class=' dripicons-cart float-right text-white'></i>
-                    <h6 class="text-uppercase mt-0">Alternatif</h6>
-                    <h2 class="my-2" id="active-users-count">4</h2>
-                    <p class="mb-0 text-muted">
-                        <span class="text-nowrap text-white">Data Alternatif</span>
-                    </p>
-                </div> <!-- end card-body-->
-            </div>
-        </div>
-        <div class="col-xl-4 col-lg-4">
-            <div class="card tilebox-one text-white">
-                <div class="card-body bg-success">
-                    <i class=' dripicons-cart float-right'></i>
-                    <h6 class="text-uppercase mt-0">Kriteria</h6>
-                    <h2 class="my-2" id="active-users-count">4</h2>
-                    <p class="mb-0 text-muted">
-                        <span class="text-nowrap text-white">Data Kriteria</span>
-                    </p>
-                </div> 
-            </div>
-        </div>
-        <div class="col-xl-4 col-lg-4">
-            <div class="card tilebox-one text-white">
-                <div class="card-body bg-danger">
-                    <i class='dripicons-shopping-bag float-right'></i>
-                    <h6 class="text-uppercase mt-0">Penilaian (Assestmnet)</h6>
-                    <h2 class="my-2" id="active-users-count">4</h2>
-                    <p class="mb-0 text-muted">
-                        <span class="text-nowrap text-white">Penilaian</span>  
-                    </p>
-                </div> 
-            </div>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h3>Sistem Pendukung Keputusan Menentukan Produktivitas Tim Terbaik </h3>
-            <h3>Pada Project Integrasi Digitalisasi SPBU Pada PT Telkom Akses Medan</h3>
-            <h3>Menggunakan Metode SAW (Simple Additive Waighting)</h3>
-        </div>
-    </div>
-
-   
-
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Dashboard</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v1</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
 </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3>5</h3>
+
+              <p>Informasi Tim</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3>5</h3>
+
+              <p>List Info Kriteria</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3>5</h3>
+
+              <p>Penilaian Metode</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-danger">
+            <div class="inner">
+              <h3>1</h3>
+
+              <p>One Access Account</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+            <h2 class="m-0 text-dark text-center">
+                Sistem Pendukung Keputusan Menentukan Tim Terbaik Pada Project Integrasi Digitalisasi SPBU
+                Pertamina Pada PT Telkom Akses Medan Menggunakan Metode Simple Additive Weighting (SAW)
+            </h2>
+          </div>
+      </div>
+      <!-- /.row -->
+      <!-- Main row -->
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+  </section>
+
+
 
 
 @endsection

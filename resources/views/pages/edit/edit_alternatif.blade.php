@@ -2,24 +2,26 @@
 @section('content')
 @section('title', 'Edit Data')
 
-<div class="container-fluid">
-                        
-    <!-- start page title -->
-    <div class="row">
-        <div class="col-12">
-            <div class="page-title-box">
-                <div class="page-title-right">
-                    <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Modul Alternatif</a></li>
-                        <li class="breadcrumb-item active">Alternatif</li>
-                    </ol>
-                </div>
-                <h4 class="page-title">Edit Data</h4>
-            </div>
-        </div>
-    </div>
-    <!-- end page title -->
-    <div class="row mb-2">
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Edit Data Alternatif</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Modul Alternatif</a></li>
+            <li class="breadcrumb-item active">Data</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row mb-2">
         <div class="col-lg-2">
             <a href="{{ url('/alternatif') }}" class="btn btn-primary"><i class="uil-arrow-circle-left"></i> Kembali</a>
         </div>
@@ -49,7 +51,7 @@
                                               <input type="text" class="form-control" name="nama" value="{{ $alternatif->nama }}">
                                           </div>                         
                                       </div>
-
+    
                                   </div>
                                   <div class="modal-footer">
                                     <button type="submit" class="btn btn-primary">update Data</button>
@@ -60,8 +62,12 @@
             </div>
         </div>
     </div>
+      <!-- /.row -->
+      <!-- Main row -->
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+</section>
 
-</div>
 
 
 @endsection

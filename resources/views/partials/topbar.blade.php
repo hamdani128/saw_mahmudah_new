@@ -1,4 +1,4 @@
-<div class="navbar-custom">
+{{-- <div class="navbar-custom">
     <ul class="list-unstyled topbar-right-menu float-right mb-0">
 
         <li class="dropdown notification-list">
@@ -42,6 +42,30 @@
             </div>
         </li>
 
-    </ul>
+    {{-- </ul>
     
-</div>
+</div> --}} 
+
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+    
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <!-- Notifications Dropdown Menu -->
+      <form action="{{ route('logout') }}" method="post">
+        @csrf
+      <button type="submit" class="btn btn-block btn-dark">Log Out <i class="fas fa-sign-out-alt"></i></button>
+      </form>
+    </ul>
+
+
+  </nav>

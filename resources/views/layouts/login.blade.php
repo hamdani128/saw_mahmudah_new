@@ -1,111 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-    
-<!-- Mirrored from coderthemes.com/hyper/saas/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Feb 2020 05:16:51 GMT -->
+<html>
 <head>
-        <meta charset="utf-8" />
-        <title>Log In | Administrator</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login Administrasi</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- App css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" />
-        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
-
-    </head>
-
-    <body class="authentication-bg">
-
-        <div class="account-pages mt-5 mb-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5">
-                        <div class="card">
-
-                            <!-- Logo -->
-                            <div class="card-header pt-4 pb-4 text-center">
-                                <a href="index.html">
-                                    <span><img src="assets/images/telkom.png" alt="" height="70"></span>
-                                </a>
-                            </div>
-
-                            <div class="card-body p-4">
-                                
-                                <div class="text-center w-75 m-auto">
-                                    <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Sign In</h4>
-                                    <p class="text-muted mb-4">Enter your username and password to access admin panel.</p>
-                                </div>
-
-                                <form method="POST" action="{{ route('login') }}">
-                                    @csrf
-
-                                    <div class="form-group">
-                                        <label for="Username">Username</label>
-                                        <input class="form-control" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" id="emailaddress" required="" placeholder="Enter your username">
-                                        
-                                        @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-
-                                    </div>
-
-                                    <div class="form-group">
-                                        <a href="pages-recoverpw.html" class="text-muted float-right"><small>Forgot your password?</small></a>
-                                        <label for="password">Password</label>
-                                        <input class="form-control" type="password" @error('password') is-invalid @enderror" name="password" id="password" placeholder="Enter your password">
-                                        @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="checkbox-signin" checked {{ old('remember') ? 'checked' : '' }}>
-                                            <label class="custom-control-label" for="checkbox-signin">Remember me</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group mb-0 text-center">
-                                        <button class="btn btn-info" type="submit"> Log In </button>
-                                    </div>
-
-                                </form>
-                            </div> <!-- end card-body -->
-                        </div>
-                        <!-- end card -->
-
-                        <div class="row mt-3">
-                            <div class="col-12 text-center">
-                                <p class="text-muted">Don't have an account? <a href="pages-register.html" class="text-muted ml-1"><b>Sign Up</b></a></p>
-                            </div> <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                    </div> <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+        <div class="login-logo">
+            <span><img src="img/telkom.png" alt="" height="80"></span>
         </div>
-        <!-- end page -->
+      <p class="login-box-msg">Sign in to start your session</p>
+      <form action="{{ route('login') }}" method="POST">
+        @csrf
+        <div class="input-group mb-3">
+          <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="username" name="name" value="{{ old('name') }}" id="username">
 
-        <footer class="footer footer-alt">
-            2018 - 2020 © Hyper - Coderthemes.com
-        </footer>
+          @error('name')
+          <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+          </span>
+          @enderror
 
-        <!-- bundle -->
-        <script src="assets/js/vendor.min.js"></script>
-        <script src="assets/js/app.min.js"></script>
-        
-    </body>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" name="password" id="password">
+          @error('password')
+          <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+          </span>
+          @enderror
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember" checked {{ old('remember') ? 'checked' : '' }}>
+              <label for="remember">
+                Remember Me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-2 pt-2">
+            <button class="btn btn-block btn-primary" type="submit" value="login">
+                <i class="fas fa-sign-in-alt"></i> Sign in 
+            </button>
+        </div>
+      </form>
+      <p class="mb-0 pt-2">
+        <a href="register.html" class="text-center">Register a new membership</a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- /.login-box -->
 
-<!-- Mirrored from coderthemes.com/hyper/saas/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Feb 2020 05:16:51 GMT -->
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+
+</body>
 </html>
