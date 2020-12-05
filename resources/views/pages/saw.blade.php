@@ -161,6 +161,12 @@
                         <h4 class="text-white">Hasil Metode Perhitungan</h4>
                     </div>
                     <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <a href="/metode/print" class="btn btn-primary"><i class="fa fa-print"></i> Print Out </a>
+                            </div>
+                        </div>
+                       <div class="row">
                         <div class="col-md-12">
                             <div class="table-responsive">
                                 <table id="example1" class="table table-bordered">
@@ -191,6 +197,7 @@
                                 </table>
                             </div>
                         </div>
+                       </div>
                     </div>
                 </div>
             </div>
@@ -242,7 +249,7 @@
                 return $(this).text() == v;
             }).next().text(i + 1);
         })
-
+        
     });
 
 </script>

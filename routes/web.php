@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::middleware('auth')->group(function(){
+Route::middleware('auth')->group(function () {
     Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
     Route::get('/alternatif', 'AlternatifController@index')->name('alternatif');
     Route::post('/alternatif-create', 'AlternatifController@add_alternatif')->name('add_alternatif');
@@ -40,7 +40,5 @@ Route::middleware('auth')->group(function(){
     Route::get('/delete/assesment/{assesment}', 'AssesmentController@destroy');
 
     Route::get('/saw', 'MetodeController@index')->name('saw');
-
+    Route::get('/metode/print', 'MetodeController@print');
 });
-
-
