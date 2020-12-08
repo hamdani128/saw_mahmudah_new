@@ -45,7 +45,7 @@
                                         <td>{{ $item->nama }}</td>
                                         <td class="row">
                                             <div class="d-flex mr-1 mb-1">
-                                                <a href="/edit/alternatif/{{$item->id}}" class="btn btn-md btn-warning" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></a>
+                                                <a href="/edit/alternatif/{{$item->id}}" class="btn btn-md btn-warning"   ><i class="fas fa-edit"></i></a>
                                             </div>
                                             <div class="d-flex mr-1 mb-1">
                                                 <a href="/delete/alternatif/{{$item->id}}" class="btn-md btn btn-danger"  onclick="return confirm('Yakin Data Akan Dihapus ?')"  data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fa fa-trash"></i></a>               
